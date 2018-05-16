@@ -32,7 +32,6 @@ class ProductPublishedListener
     {
 
         $product = $event->getProduct();
-        $productData = $this->aws->translateProductData($product);
         $sku = $product->getvalue('sku')->__toString();
 
         file_put_contents('test.log',$sku);
